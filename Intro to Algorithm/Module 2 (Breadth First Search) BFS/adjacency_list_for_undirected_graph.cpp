@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n,e;
+    cin >> n >> e;
+
+    int a[n];
+
+    vector<int> adj_list [n+1]; //array of vector
+    while(e--)
+    {
+        int a,b;
+        cin >> a >> b;
+        adj_list[a].push_back(b);
+        adj_list[b].push_back(a); //undirected
+    }
+
+    for(int i=0; i<n; i++)
+    {
+        cout << i << " -> ";
+        for(int x : adj_list[i]) //ekhane adj_list[i] mane tw vector, r vector ta shortcut for loop er moddhe diye dilm
+            cout << x << " ";
+        cout << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,14 @@
+How many times “hi” will be printed for the following code snippet?
+for(int i=0; i<=10; i++)
+    {
+        printf("hi ");
+        if(i>2)
+        {
+            break;
+        }
+   }
+
+   A) 2
+   B) 3
+   C) 4
+   D) 10
